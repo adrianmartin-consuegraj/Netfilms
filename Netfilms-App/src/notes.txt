@@ -1,0 +1,36 @@
+component 'FilmGrid'
+
+const FilmGrid = () => {
+
+  const [films, setFilms] = useState([])
+
+  //* this useEffect is going to be executed when the entire component is already load
+  // you can make async calls with this useEffect (do not put 'async' directly in the function because you're going to get an error)
+  useEffect (() => {
+    fetch('http://localhost:8080/init/films')
+    .then ((response) => response.json())
+    .then((json) => setFilms(json)
+    )}, [])
+
+  return ( 
+    <>
+    <h1 className={styles.title}>Films</h1>
+    
+    <ul className={styles.filmGrid}>
+      {/*//* with the curly brackets '{}' you can insert some JavaScript code inside your React file */}
+      
+      {/* 1. we use the 'movie' object (it doesn't matter the name) which is basically the JSON object already imported. */}
+      {/* 2. we iterate the object with the method 'map' and inside that method, we create an arrow function which contains a new parameter (just created for this ocasion) called 'movie': so it sould be looked like this: '(movie) =>' */}
+      {/* 3. after that, we write what's going to happen in the curly brackets of the function with the parameter 'movie' inside: this parameter is used to interact with every single object of the JSON array stored in the 'movies' object */}
+      {films && films.map((film) => {
+        //! problem here
+        //! console.log('film name: ' + film.name)
+        return <Film filmDetails={film} />
+      })}
+    </ul>
+    </>
+  )
+
+}
+
+export default FilmGrid

@@ -1,0 +1,15 @@
+.serieCard {
+    /* deleting the dots of the '<li>' tag */
+    list-style: none;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.serieCard:hover {
+    opacity: 0.8;
+}
+
+.serieImage {
+    border-radius: 10px;
+    background-color: azure;
+}
