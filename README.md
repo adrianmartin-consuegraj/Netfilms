@@ -14,5 +14,6 @@ I've got all the information from an API called "The Movie Database", in order t
 Then I connect my database with my Spring project, from where I can manage all the information I need to create my own API: depending of the endpoint you set in the localhost, you will be able to get some films or series.
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB)
+![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=flat&logo=spring&logoColor=white)
 <br>
 ![img](https://img.shields.io/badge/version-1.0-blue)
